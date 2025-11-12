@@ -16,7 +16,7 @@ import logo from '@/assets/logo/Abble-logo-dark.png'
   
         <!-- Google button -->
         <button
-          class="w-80 flex items-center justify-center gap-2 bg-sky-500 hover:bg-sky-600 text-white py-2 rounded-lg font-medium transition"
+          class="w-80 flex items-center justify-center gap-2 bg-sky-500 hover:bg-sky-600 text-white py-2 rounded-lg font-medium transition hover:border-sky-400 hover:border-2 border border-sky-300"
         > <span class="pi pi-google text-white"></span>
           Continue with Google
         </button>
