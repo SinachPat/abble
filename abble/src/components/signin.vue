@@ -4,7 +4,7 @@ import logo from '@/assets/logo/Abble.png'
 <template>
     <section class="min-h-screen flex flex-col items-center flex-start pt-24 bg-gray-100">
       <!-- Logo -->
-      <img v-bind:src="logo" alt="abble logo" class="w-auto h-8 mb-10" />
+      <img v-bind:src="logo" alt="abble logo" class="w-auto h-6 mb-10" />
   
       <!-- Card -->
       <div class="flex flex-col items-center space-y-4 w-full max-w-sm">
