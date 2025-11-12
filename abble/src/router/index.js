@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import SignInView from '@/views/SignInView.vue'
+import CreateWorkspaceView from '@/views/CreateWorkspaceView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -6,8 +8,14 @@ const router = createRouter({
     {
       path: '/signin',
       name: 'signin',
-      component: () => import('@/views/SignInView.vue'),
+      component: SignInView,
+    },
+    {
+      path: '/create-workspace',
+      name: 'createWorkspace',
+      component: CreateWorkspaceView,
     }
+
   ],
 })
 
