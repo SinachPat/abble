@@ -2,7 +2,7 @@
 import logo from '@/assets/logo/Abble.png'
 </script>
 <template>
-    <section class="min-h-screen flex flex-col items-center flex-start mt-24 bg-gray-50">
+    <section class="min-h-screen flex flex-col items-center flex-start pt-24 bg-gray-100">
       <!-- Logo -->
       <img v-bind:src="logo" alt="abble logo" class="w-auto h-8 mb-10" />
   
