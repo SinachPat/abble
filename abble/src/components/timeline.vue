@@ -5,6 +5,7 @@ import laasify from '@/assets/logo/laasify.png'
 import hngtech from '@/assets/logo/hngtechlogo.jpeg'
 import linear from '@/assets/logo/linear.png'
 import osinachi from '@/assets/logo/osinachi.png'
+import sidebar from '@/assets/logo/sidebar-expand.png'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 const open = ref(false);
@@ -172,7 +173,10 @@ onBeforeUnmount(() => {
     <main class="flex-1 border rounded-md m-2 border-gray-300 bg-white">
       <!-- Topbar / filters -->
       <div class="p-4 border-b border-gray-300">
-        <h2 class="text-lg font-medium">Stories</h2>
+        <div class="flex items-center gap-6">
+          <img :src="sidebar" alt="sidebar expand icon" class="w-6 h-6"/>
+          <h2 class="text-md">Stories <i class="pi pi-chevron-down"></i></h2>
+        </div>
       </div>
 
       <!-- Main content scrollable -->
