@@ -4,6 +4,7 @@ import meetwith from '@/assets/logo/meetwith.png'
 import laasify from '@/assets/logo/laasify.png'
 import hngtech from '@/assets/logo/hngtechlogo.jpeg'
 import linear from '@/assets/logo/linear.png'
+import osinachi from '@/assets/logo/osinachi.png'
 import { ref } from 'vue'
 
 const open = ref(false);
@@ -14,7 +15,6 @@ const workspaceOptions = [
   { name: "Laasify", icon: laasify },
   { name: "HNG Internship", icon: hngtech },
 ];
-
 const selected = ref(workspaceOptions[0]);
 
 const toggleDropdown = () => {
@@ -24,6 +24,25 @@ const toggleDropdown = () => {
 const selectOption = (option) => {
   selected.value = option;
   open.value = false;
+};
+
+const profileOpen = ref(false);
+
+const profileSettingOption = [
+  { title: "Profile", titleIcon: osinachi },
+  { title: "Settings", titleIcon: "pi pi-cog" },
+  { title: "Logout", titleIcon: "pi pi-sign-out" },
+];
+
+const profileSelected = ref(profileSettingOption[0]);
+
+const toggleProfileDropdown = () => {
+  profileOpen.value = !profileOpen.value;
+};
+
+const selectProfileOption = (optionProfile) => {
+  profileSelected.value = optionProfile;
+  profileOpen.value = false;
 };
 
 </script>
@@ -55,7 +74,7 @@ const selectOption = (option) => {
                         </li>
                     </ul>
                 </div>
-        </div>
+            </div>
     </div>
       </div>
       <div class="flex-1 p-4">
@@ -76,7 +95,7 @@ const selectOption = (option) => {
             </div>
             <a href="#"><i class="pi pi-ellipsis-h"></i></a>
         </div>
-        <div class="flex items-center justify-between mt-[400px] mb-2 text-gray-500">
+        <div class="flex items-center justify-between mt-[380px] mb-2 text-gray-500">
             <p>CONNTECTORS</p>
             <a href="#"><i class="pi pi-plus"></i></a>
         </div>
@@ -96,6 +115,35 @@ const selectOption = (option) => {
             </div>
             <a href="#"><i class="pi pi-ellipsis-h"></i></a>
         </div>
+        <div class="relative w-[160px]">
+            <!-- Profile dropdown button -->
+        <button
+            @click="toggleProfileDropdown"
+            class="w-[225px] border border-gray-300 rounded py-2 px-3 flex items-center justify-between hover:bg-gray-50 transition"
+            >
+        <div class="flex items-center gap-2">
+        <i :class="profileSelected.titleIcon"></i>
+        <span>{{ profileSelected.title }}</span>
+        </div>
+            <i class="pi pi-chevron-down text-gray-500"></i>
+        </button>
+
+        <!-- Dropdown list -->
+    <div
+      v-if="profileOpen"
+      class="absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded shadow-lg"
+    >
+      <div
+        v-for="optionProfile in profileSettingOption"
+        :key="optionProfile.title"
+        @click="selectProfileOption(optionProfile)"
+        class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 cursor-pointer transition"
+      >
+        <i :class="optionProfile.titleIcon"></i>
+        <span>{{ optionProfile.title }}</span>
+      </div>
+    </div>
+  </div>
       </div>
     </aside>
 
