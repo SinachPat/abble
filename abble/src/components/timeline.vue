@@ -5,7 +5,7 @@ import laasify from '@/assets/logo/laasify.png'
 import hngtech from '@/assets/logo/hngtechlogo.jpeg'
 import linear from '@/assets/logo/linear.png'
 import osinachi from '@/assets/logo/osinachi.png'
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 const open = ref(false);
 
@@ -45,6 +45,26 @@ const selectProfileOption = (optionProfile) => {
   profileOpen.value = false;
 };
 
+const dropdownRef = ref(null);
+const workspacedropdownRef = ref(null);
+
+const handleClickOutside = (event) => {
+  if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
+    profileOpen.value = false
+  }
+  if (workspacedropdownRef.value && !workspacedropdownRef.value.contains(event.target)) {
+    open.value = false
+  }
+}
+
+onMounted(() => {
+  document.addEventListener("click", handleClickOutside)
+})
+
+onBeforeUnmount(() => {
+  document.removeEventListener("click", handleClickOutside)
+})
+
 </script>
 
 <template>
@@ -56,7 +76,7 @@ const selectProfileOption = (optionProfile) => {
       <div class="p-4 border-b border-gray-100">
         <div class="flex flex-row items-start gap-2">
             <img v-bind:src="abbleicon" alt="abble icon" class="w-10 h-10 mb-2 rounded-md"/>
-            <div class="relative">
+            <div ref="workspacedropdownRef" class="relative">
                 <button @click="toggleDropdown" class="w-[177px] flex justify-between items-center gap-2 text-gray-700 bg-white p-2 hover:bg-gray-50 rounded-md border border-gray-300">
                     <div class="flex items-center gap-1">
                         <img :src="selected.icon" alt="" class="w-6 h-6 rounded" />
@@ -66,7 +86,7 @@ const selectProfileOption = (optionProfile) => {
                         <i class="pi pi-chevron-down ml-8"></i>
                     </div>
                 </button>
-                <div v-if="open" class="absolute mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg z-10">
+                <div v-if="open" class="absolute mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg">
                     <ul>
                         <li v-for="option in workspaceOptions" :key="option.name" @click="selectOption(option)" class="flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer">
                             <img v-bind:src="option.icon" alt="option icon" class="w-6 h-6 rounded-md"/>
@@ -75,8 +95,9 @@ const selectProfileOption = (optionProfile) => {
                     </ul>
                 </div>
             </div>
-    </div>
+        </div>
       </div>
+      
       <div class="flex-1 p-4">
         <div>
         <a href="" class="flex items-center gap-2 text-gray-700 bg-white p-2 hover:bg-gray-50 rounded-md border border-gray-300">
@@ -115,7 +136,7 @@ const selectProfileOption = (optionProfile) => {
             </div>
             <a href="#"><i class="pi pi-ellipsis-h"></i></a>
         </div>
-        <div class="relative w-[160px]">
+        <div ref="dropdownRef" class="relative w-[160px]">
             <!-- Profile dropdown button -->
         <button
             @click="toggleProfileDropdown"
@@ -131,7 +152,7 @@ const selectProfileOption = (optionProfile) => {
         <!-- Dropdown list -->
     <div
       v-if="profileOpen"
-      class="absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded shadow-lg"
+      class="absolute bottom-10 left-16 z-10 mt-1 w-full bg-white border border-gray-300 rounded shadow-lg"
     >
       <div
         v-for="optionProfile in profileSettingOption"
