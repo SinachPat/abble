@@ -199,6 +199,17 @@ onBeforeUnmount(() => {
 
       </div>
       <!-- Main content scrollable -->
+      <div class="flex items-center justify-between w-[38%] border border-gray-300 mt-2 rounded-lg mx-2">
+          <div class="border-r border-gray-300 px-4 py-2 bg-gray-200 rounded-l-lg flex items-center">
+              <a href="" class="block">For you</a>
+          </div>
+          <div class="border-r border-gray-300 px-4 py-2 flex items-center">
+              <a href="" class="block">General</a>
+          </div>
+          <div class="px-4 py-2 rounded-r-lg flex items-center">
+              <a href="" class="block">Popular</a>
+          </div>
+      </div>
       <div class="p-6 overflow-y-auto h-[calc(100vh-64px)]">
         <!-- Main body content goes here -->
       </div>
