@@ -173,7 +173,7 @@ onBeforeUnmount(() => {
     <!-- Main Content -->
     <main class="flex-1 border rounded-md m-2 border-gray-300 bg-white">
       <!-- Topbar / filters -->
-      <div class="p-4 border-b border-gray-300">
+      <div class="p-2 border-b border-gray-300">
         <div class="flex items-center">
           <div class="flex items-center gap-6">
             <img :src="sidebar" alt="sidebar expand icon" class="w-6 h-6"/>
