@@ -6,6 +6,7 @@ import hngtech from '@/assets/logo/hngtechlogo.jpeg'
 import linear from '@/assets/logo/linear.png'
 import osinachi from '@/assets/logo/osinachi.png'
 import sidebar from '@/assets/logo/sidebar-expand.png'
+import jira from '@/assets/logo/jira.png'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 const open = ref(false);
@@ -173,9 +174,24 @@ onBeforeUnmount(() => {
     <main class="flex-1 border rounded-md m-2 border-gray-300 bg-white">
       <!-- Topbar / filters -->
       <div class="p-4 border-b border-gray-300">
-        <div class="flex items-center gap-6">
-          <img :src="sidebar" alt="sidebar expand icon" class="w-6 h-6"/>
-          <h2 class="text-md">Stories <i class="pi pi-chevron-down"></i></h2>
+        <div class="flex items-center">
+          <div class="flex items-center gap-6">
+            <img :src="sidebar" alt="sidebar expand icon" class="w-6 h-6"/>
+            <h2 class="text-md">Stories <i class="pi pi-chevron-down"></i></h2>
+          </div>
+          <div class="flex flex-1 items-center ml-2">
+            <h1 class="ml-40">Connectors</h1>
+            <i class="pi pi-github text-lg text-white bg-black p-1 rounded-2xl ml-2"></i>
+            <img :src="linear" alt="adding linear icon next to github" class="w-7 h-7 -ml-3"/>
+            <img :src="jira" alt="adding jira icon next to linear" class="w-7 h-7 -ml-3 border border-gray-200 rounded-2xl"/>
+            <a href="" class="ml-2 text-sky-500">Learn more <span class="pi pi-arrow-right"></span></a>
+          </div>
+          <div>
+            <button class="bg-sky-500 text-white px-3.5 py-1.5 rounded-md hover:bg-sky-600 transition">
+              Share
+            </button>
+            <i class="pi pi-sparkles text-xl ml-6 bg-sky-200 px-2 py-2 rounded-md"></i>
+          </div>
         </div>
       </div>
 
