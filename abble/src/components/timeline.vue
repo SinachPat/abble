@@ -184,17 +184,20 @@ onBeforeUnmount(() => {
             <i class="pi pi-github text-lg text-white bg-black p-1 rounded-2xl ml-2"></i>
             <img :src="linear" alt="adding linear icon next to github" class="w-7 h-7 -ml-3"/>
             <img :src="jira" alt="adding jira icon next to linear" class="w-7 h-7 -ml-3 border border-gray-200 rounded-2xl"/>
-            <a href="" class="ml-2 text-sky-500">Learn more <span class="pi pi-arrow-right"></span></a>
+            <a href="" class="ml-2 text-sky-500 text-sm underline">Learn more <span class="pi pi-arrow-right"></span></a>
           </div>
           <div>
             <button class="bg-sky-500 text-white px-3.5 py-1.5 rounded-md hover:bg-sky-600 transition">
               Share
             </button>
-            <i class="pi pi-sparkles text-xl ml-6 bg-sky-200 px-2 py-2 rounded-md"></i>
+            <a href=""><i class="pi pi-sparkles text-xl ml-6 mt-1 bg-sky-200 px-2 py-2 rounded-md"></i></a>
           </div>
         </div>
       </div>
+      <div class="">
 
+
+      </div>
       <!-- Main content scrollable -->
       <div class="p-6 overflow-y-auto h-[calc(100vh-64px)]">
         <!-- Main body content goes here -->
