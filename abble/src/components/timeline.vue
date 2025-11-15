@@ -211,11 +211,15 @@ onBeforeUnmount(() => {
           </div>
       </div>
         <!-- Main body content goes here -->
-         <div id="card" class="border border-gray-300 rounded-md p-4 mt-4 bg-white w-[95%] mx-2">
-          <div id="header">
-            <div class="flex items-center mb-4">
+         <div id="card" class="border border-gray-300 rounded-md p-4 mt-4 bg-white w-[98%] h-64 mx-2">
+          <div id="header" class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
               <h2 class="text-xl font-medium mr-2">QuickPoll: Calendar connection lagging</h2>
               <a href="" class="underline text-sky-500 text-sm"><span class="pi pi-box mr-1 text-sky-500"></span>Meetwith</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <a href="">quickpoll</a>
+              <i class="pi pi-github"></i>
             </div>
           </div>
          </div>
