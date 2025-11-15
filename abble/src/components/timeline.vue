@@ -217,9 +217,13 @@ onBeforeUnmount(() => {
     </main>
 
     <!-- Right Sidebar -->
-    <aside class="w-96 border rounded-md mt-2 mr-2 mb-2 bg-white">
-      <div class="p-4 border-b border-gray-300">
-        <h3 class="text-lg font-medium">QuickPoll Feature Chat</h3>
+    <aside class="w-96 border rounded-md mt-2 mr-2 mb-2 bg-white h-screen sticky top-0 flex flex-col">
+      <div class="flex gap-4 items-center justify-between p-4 border-b border-gray-300">
+        <h2 class="text-md">QuickPoll Feature Chat <i class="pi pi-chevron-down"></i></h2>
+        <div class="flex items-center justify-end gap-8 mt-2 text-gray-500">
+          <i class="pi pi-pen-to-square"></i>
+          <i class="pi pi-history"></i>
+        </div>
       </div>
       <div class="p-6 overflow-y-auto h-[calc(100vh-64px)]">
         <!-- Chat or details content -->
