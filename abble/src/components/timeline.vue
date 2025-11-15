@@ -118,7 +118,7 @@ onBeforeUnmount(() => {
             </div>
             <a href="#"><i class="pi pi-ellipsis-h"></i></a>
         </div>
-        <div class="flex items-center justify-between mt-[380px] mb-2 text-gray-500">
+        <div class="flex items-center justify-between mt-[420px] mb-2 text-gray-500">
             <p>CONNTECTORS</p>
             <a href="#"><i class="pi pi-plus"></i></a>
         </div>
@@ -211,17 +211,32 @@ onBeforeUnmount(() => {
           </div>
       </div>
         <!-- Main body content goes here -->
-         <div id="card" class="border border-gray-300 rounded-md p-4 mt-4 bg-white w-[98%] h-64 mx-2">
+         <div id="card" class="border border-gray-300 rounded-md p-4 mt-4 bg-white w-[98%] h-[547px] mx-2">
           <div id="header" class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <h2 class="text-xl font-medium mr-2">QuickPoll: Calendar connection lagging</h2>
               <a href="" class="underline text-sky-500 text-sm"><span class="pi pi-box mr-1 text-sky-500"></span>Meetwith</a>
             </div>
             <div class="flex items-center gap-2">
-              <a href="">quickpoll</a>
-              <i class="pi pi-github"></i>
+              <a href="" class="bg-sky-100 p-1.5 text-sm rounded-3xl">quickpoll</a>
+              <i class="pi pi-github text-xl text-white bg-black p-1 rounded-2xl"></i>
             </div>
           </div>
+          <div id="poster-details" class="flex items-center mt-4 mb-3">
+            <img v-bind:src="osinachi" alt="poster profile picture" class="w-8 h-8 rounded-full border border-gray-300 mr-2"/>
+            <div class="flex flex-row items-center">
+              <p class="font-medium">Osinachi</p>
+              <p class="text-sm text-gray-500 ml-4">Posted Changes 2 hours ago</p>
+            </div>
+          </div>
+          <hr>
+          <p class="mt-4 mb-4 text-gray-600">
+            <span class="font-medium text-lg">🚀 Deployment Update Summary</span> <br>
+            We’ve shipped a new version packed with usability improvements, UI polish, and a brand-new engagement feature designed to make collaboration and scheduling on Meetwith even smoother.This release focuses on interaction, clarity, and control — so you can spend less time managing meetings and more time making them meaningful.
+            <br><br><span class="font-medium">🗳️ 1. Introducing Quick Polls</span><br>
+            Now you can instantly gather input from participants without leaving Meetwith. Quick Polls make it easy to: <span><a href="" class="underline text-sky-500">Read more</a></span>
+          </p>
+          <hr>
          </div>
     </main>
 
