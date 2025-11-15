@@ -210,9 +210,15 @@ onBeforeUnmount(() => {
               <a href="" class="block">Popular</a>
           </div>
       </div>
-      <div class="p-6 overflow-y-auto h-[calc(100vh-64px)]">
         <!-- Main body content goes here -->
-      </div>
+         <div id="card" class="border border-gray-300 rounded-md p-4 mt-4 bg-white w-[95%] mx-2">
+          <div id="header">
+            <div class="flex items-center mb-4">
+              <h2 class="text-xl font-medium mr-2">QuickPoll: Calendar connection lagging</h2>
+              <a href="" class="underline text-sky-500 text-sm"><span class="pi pi-box mr-1 text-sky-500"></span>Meetwith</a>
+            </div>
+          </div>
+         </div>
     </main>
 
     <!-- Right Sidebar -->
