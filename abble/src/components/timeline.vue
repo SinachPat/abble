@@ -180,18 +180,18 @@ onBeforeUnmount(() => {
             <img :src="sidebar" alt="sidebar expand icon" class="w-6 h-6"/>
             <h2 class="text-md">Stories <i class="pi pi-chevron-down"></i></h2>
           </div>
-          <div class="flex flex-1 items-center ml-2">
-            <h1 class="ml-40">Connectors</h1>
+          <div class="flex flex-1 items-center justify-center ml-2">
+            <h1 class="ml-60">Connectors</h1>
             <i class="pi pi-github text-lg text-white bg-black p-1 rounded-2xl ml-2"></i>
             <img :src="linear" alt="adding linear icon next to github" class="w-7 h-7 -ml-3"/>
             <img :src="jira" alt="adding jira icon next to linear" class="w-7 h-7 -ml-3 border border-gray-200 rounded-2xl"/>
-            <a href="" class="ml-2 text-sky-500 text-sm underline">Learn more <span class="pi pi-arrow-right"></span></a>
+            <a href="" class="text-sky-500 text-sm underline text-center">Learn more <span class="pi pi-external-link justify-center items-center text-center"></span></a>
           </div>
           <div>
             <button class="bg-sky-500 text-white px-3.5 py-1.5 rounded-md hover:bg-sky-600 transition">
               Share
             </button>
-            <a href=""><i class="pi pi-sparkles text-xl ml-6 mt-1 bg-sky-200 px-2 py-2 rounded-md"></i></a>
+            <!-- <a href=""><i class="pi pi-sparkles text-xl ml-6 mt-1 bg-sky-200 px-2 py-2 rounded-md"></i></a> -->
           </div>
         </div>
       </div>
@@ -225,8 +225,27 @@ onBeforeUnmount(() => {
           <i class="pi pi-history"></i>
         </div>
       </div>
-      <div class="p-6 overflow-y-auto h-[calc(100vh-64px)]">
+      <div class="p-2 overflow-y-auto h-[calc(100vh-64px)]">
         <!-- Chat or details content -->
+    <div class="relative border rounded-lg p-4 pt-4 mt-[630px] bg-white">
+    <textarea
+      class="w-64 h-24 resize-none outline-none text-gray-700"
+      rows="3"
+      placeholder="Enter your message"
+    ></textarea>
+
+    <!-- Model Selector -->
+    <button class="absolute left-4 bottom-4 px-2 py-2 border rounded-lg shadow-sm flex items-center gap-2 text-gray-600 bg-white">
+      <i class="pi pi-robot text-lg"></i>
+      <span>GPT-4</span>
+      <i class="pi pi-chevron-down"></i>
+    </button>
+
+    <!-- Send Button -->
+    <button class="absolute right-4 bottom-4 p-3 bg-sky-500 text-white rounded-xl w-10 h-10 flex items-center justify-center hover:bg-sky-600 transition">
+      <i class="pi pi-send"></i>
+    </button>
+  </div>
       </div>
     </aside>
 
