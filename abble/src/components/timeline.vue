@@ -211,7 +211,7 @@ onBeforeUnmount(() => {
           </div>
       </div>
         <!-- Main body content goes here -->
-         <div id="card" class="border border-gray-300 rounded-md p-4 mt-4 bg-white w-[98%] h-[547px] mx-2">
+         <div id="card" class="border border-gray-300 rounded-md p-4 mt-4 bg-white w-[98%] h-[520px] mx-2">
           <div id="header" class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <h2 class="text-xl font-medium mr-2">QuickPoll: Calendar connection lagging</h2>
@@ -237,6 +237,22 @@ onBeforeUnmount(() => {
             Now you can instantly gather input from participants without leaving Meetwith. Quick Polls make it easy to: <span><a href="" class="underline text-sky-500">Read more</a></span>
           </p>
           <hr>
+          <div id="reactions" class="flex items-center justify-start gap-4 mt-1">
+            <div id="comment" class="flex items-center justify-center mt-4 border border-gray-400 p-1 rounded-3xl w-[135px] hover:bg-gray-100 cursor-pointer">
+              <i class="pi pi-comment text-lg"></i>
+              <a href="" class="ml-2"><span class="mr-2">1</span>Comment</a>
+            </div>
+            <div id="smiley" class="flex items-center justify-center mt-4 border border-gray-400 p-1 rounded-3xl w-10 hover:bg-gray-100 cursor-pointer">
+              <i class="pi pi-face-smile text-lg"></i>
+            </div>
+          </div>
+          <div id="source-link" class="mt-6 flex flex-col">
+            <p class="text-sm font-medium text-gray-800">Click on the repo and commit directory to learn more:</p>
+            <div class="flex items-center gap-2 mt-2">
+              <a href="" id="source-name" class="text-white text-sm bg-slate-400 p-1.5 rounded-2xl w-[90px] text-center">github.com</a>
+              <a href="" id="pr-code" class="text-green-900 text-sm bg-green-300 p-1.5 rounded-2xl w-[70px] text-center">#43dh4</a>
+            </div>
+          </div>
          </div>
     </main>
 
